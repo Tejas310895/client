@@ -128,4 +128,4 @@ nb-configuration.xml
 writable
 app/Config/App.php
 app/Config/Database.php
-composer.json
+composer.phar
