@@ -55,6 +55,15 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+        $this->db = \Config\Database::connect();
+        $this->products = new \App\Models\Products();
+        $this->itemnary_group = new \App\Models\ProductItemnaryGroup();
+        $this->itemnary = new \App\Models\ProductItemnary();
+        $this->institutes = new \App\Models\Institutions();
+        $this->partner_details = new \App\Models\PartnerDetails();
+        $this->orders = new \App\Models\Orders();
+        // $this->users = new UserModel();
+        // $this->userIdentities = new UserIdentityModel();
     }
 
     protected function render_page($view, $data = [])
