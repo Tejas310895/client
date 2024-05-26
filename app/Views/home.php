@@ -156,7 +156,12 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <embed src="https://admin.printbizz.in/writable/uploads/20240501/1714589422_ec47a3c6ede44c406349.pdf" id="new1" onclick="PrintElem(this.id)" style="width: 100%; height:99%;">
+        <object data="https://admin.printbizz.in/writable/uploads/20240501/1714589422_ec47a3c6ede44c406349.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Your web browser doesn't have a PDF plugin.
+                Instead you can <a href="filename.pdf">click here to
+                    download the PDF file.</a></p>
+        </object>
+        <!-- <embed src="https://admin.printbizz.in/writable/uploads/20240501/1714589422_ec47a3c6ede44c406349.pdf" id="new1" onclick="PrintElem(this.id)" style="width: 100%; height:99%;"> -->
     </div>
 </div>
 <script>
