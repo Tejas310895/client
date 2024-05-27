@@ -62,7 +62,7 @@
                                                                     <?php foreach ($group['items'] as $item) : ?>
                                                                         <div class="mb-2">
                                                                             <div class="badge bg-primary"></div>
-                                                                            <?=$group['name']?> : <strong><?=$item['name']?></strong>
+                                                                            <?= $group['name'] ?> : <strong><?= $item['name'] ?></strong>
                                                                         </div>
                                                                     <?php endforeach; ?>
                                                                 <?php endforeach; ?>
@@ -76,7 +76,7 @@
                                                                             <path d="M9 13l6 0" />
                                                                             <path d="M9 17l6 0" />
                                                                         </svg>
-                                                                        <?=$product['pages']?> <small>Pages</small> X <?=$product['copies']?> Copies
+                                                                        <?= $product['pages'] ?> <small>Pages</small> X <?= $product['copies'] ?> Copies
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -114,9 +114,17 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <iframe src="https://docs.google.com/viewer?url=https://admin.printbizz.in/writable/uploads/20240501/1714580826_bd204792e8525971b462.pdf&embedded=true" style="width:100%; height:99%;" frameborder="0"></iframe>
-
-        <!-- <embed src="https://admin.printbizz.in/writable/uploads/20240501/1714589422_ec47a3c6ede44c406349.pdf" id="new1" onclick="PrintElem(this.id)" style="width: 100%; height:99%;"> -->
+        <div class="row row-cards">
+            <?php for ($i = 0; $i < 5; $i++) : ?>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="empty p-1" style="height: 400px;">
+                            <embed src="https://admin.printbizz.in/writable/uploads/20240501/1714589422_ec47a3c6ede44c406349.pdf" id="new1" onclick="PrintElem(this.id)" style="width: 100%;height:100%;">
+                        </div>
+                    </div>
+                </div>
+            <?php endfor ?>
+        </div>
     </div>
 </div>
 <script>
