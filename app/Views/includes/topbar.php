@@ -29,9 +29,9 @@
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                    <span class="avatar"><?=strtoupper(substr(auth()->user()->getEmailIdentity()->name, 0, 2))?></span>
+                    <span class="avatar"><?= strtoupper(substr(auth()->user()->getEmailIdentity()->name, 0, 2)) ?></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div><?=auth()->user()->getEmailIdentity()->name?></div>
+                        <div><?= auth()->user()->getEmailIdentity()->name ?></div>
                         <div class="mt-1 small text-secondary">Partner</div>
                     </div>
                 </a>
@@ -77,7 +77,7 @@
                                     <path d="M21 21l-6 -6" />
                                 </svg>
                             </span>
-                            <input type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+                            <input type="text" value="" onchange="search_product($(this))" class="form-control" placeholder="Search…" aria-label="Search in website">
                         </div>
                     </form>
                 </div>

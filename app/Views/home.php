@@ -21,7 +21,7 @@
             <div class="container-xl">
                 <div class="row row-deck row-cards">
                     <div class="col-12">
-                        <div class="row row-cards">
+                        <div class="row row-cards" id="product_bucket">
                             <?php foreach ($orders as $order) : ?>
                                 <div class="col-md-6 col-lg-4">
                                     <div class="card border border-0" style="border-radius: 20px;">
@@ -33,7 +33,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col text-truncate">
-                                                    <a href="#" class="text-reset d-block">Order # <?= $order['order_no'] ?></a>
+                                                    <a href="#" id="order_id_title" class="text-reset d-block">Order # <?= $order['order_no'] ?></a>
                                                     <div class="d-block text-secondary text-truncate mt-n1"><?= date('d M Y H:i A', strtotime($order['created_at'])) ?></div>
                                                 </div>
                                                 <div class="col-auto text-secondary">
@@ -148,5 +148,22 @@
         var myOffcanvas = document.getElementById('offcanvasStart')
         var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
         bsOffcanvas.show()
+    }
+
+    function search_product(element) {
+        var search_text = element.val();
+        if (search_text.length > 1) {
+            $('div#product_bucket').find('.col-md-6').each(function() {
+                if ($(this).find('#order_id_title').text().toUpperCase().indexOf(search_text.toUpperCase()) != -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            })
+        } else {
+            $('div#product_bucket').find('.col-md-6').each(function() {
+                $(this).show();
+            })
+        }
     }
 </script>
