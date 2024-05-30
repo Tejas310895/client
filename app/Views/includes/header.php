@@ -13,6 +13,7 @@
     <link href="public/lab_themes/dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet" />
     <link href="public/lab_themes/dist/css/demo.min.css?1692870487" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
         @import url('https://rsms.me/inter/inter.css');
 
